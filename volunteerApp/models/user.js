@@ -1,39 +1,22 @@
-// this is the user's table 
-// every user has a user key which is the primary key
 const bcrypt = require('bcrypt-nodejs');
-
 
 module.exports = (sequelize, DataTypes) => {
   const User = sequelize.define('user', {
-    firstName: { //first name
+    firstName: {
       type: DataTypes.STRING,
       allowNull: false,
       validate: {
         notEmpty: true,
       },
     },
-    lastName: { //last name
+    lastName: {
       type: DataTypes.STRING,
       allowNull: false,
       validate: {
         notEmpty: true,
       },
     },
-    collegeName: { //college name 
-      type: DataTypes.STRING,
-      allowNull: false,
-      validate: {
-        notEmpty: true,
-      },
-    },
-    dateOfBirth: { //date of birth
-      type: DataTypes.DATE,
-      allowNull: false,
-      validate: {
-        notEmpty: true,
-      },
-    },
-    username: { //user name
+    username: {
       type: DataTypes.STRING,
       allowNull: false,
       unique: true,
@@ -42,7 +25,7 @@ module.exports = (sequelize, DataTypes) => {
         isAlphanumeric: true,
       },
     },
-    email: { //email 
+    email: {
       type: DataTypes.STRING,
       allowNull: false,
       unique: true,
@@ -51,7 +34,7 @@ module.exports = (sequelize, DataTypes) => {
         isEmail: true,
       },
     },
-    password_hash: { //password
+    password_hash: {
       type: DataTypes.STRING,
     },
     password: {
@@ -61,12 +44,11 @@ module.exports = (sequelize, DataTypes) => {
       },
     },
   });
-
-  User.associate = (models) => { //the user table is connected to nonprofit table 
-    // a non profit can have many users but One user can be associated with one nonprofit 
-    models.User.belongsTo(models.NonprofitVolunteers); //this is one to many relationship
+/*
+  User.associate = (models) => {
+    models.User.hasMany(models.Post);
   }
-
+*/
   User.beforeCreate((user) =>
     new sequelize.Promise((resolve) => {
       bcrypt.hash(user.password, null, null, (err, hashedPassword) => {

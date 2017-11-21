@@ -1,7 +1,7 @@
 // this is the nonprofit table
-
+const bcrypt = require('bcrypt-nodejs');
 module.exports = (sequelize, DataTypes) => {
-  const NonProfit = sequelize.define('nonprofit', {
+  const nonProfit = sequelize.define('nonprofit', {
     name: { //nonprofit's name
       type: DataTypes.STRING,
       unique: 'compositeIndex',
@@ -31,5 +31,5 @@ module.exports = (sequelize, DataTypes) => {
     models.NonProfit.hasMany(models.User); // one nonprofit can have many users
   }
 */
-  return NonProfit;
+  return nonProfit;
 };

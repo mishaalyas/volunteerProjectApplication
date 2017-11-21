@@ -9,14 +9,14 @@
   "test": {
     "username": "postgres",
     "password": "ctp2017",
-    "database": "volunteer_test",
+    "database": "volunteer_development",
     "host": "127.0.0.1",
     "dialect": "postgresql"
   },
   "production": {
     "username": "postgres",
     "password": "ctp2017",
-    "database": "volunteer_production",
+    "database": "volunteer_development",
     "host": "127.0.0.1",
     "dialect": "postgresql"
   }
