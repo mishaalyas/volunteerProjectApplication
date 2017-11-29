@@ -16,6 +16,15 @@ module.exports = (sequelize, DataTypes) => {
         notEmpty: true,
       },
     },
+    collegeName: {
+      type: DataTypes.STRING,
+      allowNull: false,
+      unique: true,
+      validate: {
+        notEmpty: true,
+        isAlphanumeric: true,
+      },
+    },
     username: {
       type: DataTypes.STRING,
       allowNull: false,
