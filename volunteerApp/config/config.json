@@ -2,22 +2,8 @@
   "development": {
     "username": "postgres",
     "password": "ctp2017",
-    "database": "volunteer_development",
-    "host": "127.0.0.1",
-    "dialect": "postgresql"
-  },
-  "test": {
-    "username": "postgres",
-    "password": "ctp2017",
-    "database": "volunteer_development",
-    "host": "127.0.0.1",
-    "dialect": "postgresql"
-  },
-  "production": {
-    "username": "postgres",
-    "password": "ctp2017",
-    "database": "volunteer_development",
-    "host": "127.0.0.1",
-    "dialect": "postgresql"
+    "database": "ctpblog_development",
+    "host": "localhost",
+    "dialect": "postgres"
   }
 }

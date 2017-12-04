@@ -16,15 +16,6 @@ module.exports = (sequelize, DataTypes) => {
         notEmpty: true,
       },
     },
-    collegeName: {
-      type: DataTypes.STRING,
-      allowNull: false,
-      unique: true,
-      validate: {
-        notEmpty: true,
-        isAlphanumeric: true,
-      },
-    },
     username: {
       type: DataTypes.STRING,
       allowNull: false,
@@ -53,11 +44,11 @@ module.exports = (sequelize, DataTypes) => {
       },
     },
   });
-/*
+
   User.associate = (models) => {
     models.User.hasMany(models.Post);
   }
-*/
+
   User.beforeCreate((user) =>
     new sequelize.Promise((resolve) => {
       bcrypt.hash(user.password, null, null, (err, hashedPassword) => {

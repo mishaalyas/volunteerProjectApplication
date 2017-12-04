@@ -1,0 +1,78 @@
+<header>
+  <h4>SIGN UP</h4>
+</header>
+<div class="container">
+  <div class="row">
+    <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+      {{#each error}}
+      <div class="alert alert-danger">{{this}}</div>
+      {{/each}}
+      <form name="login" action="/login" method="post" style="border:5px solid orange">
+        <div class="row">
+          <div class="col-xs-6 col-sm-6 col-md-6">
+            <div class="form-group">
+              <label>
+              <span>First Name</span>
+              <input type="text" name="firstname"> </label>
+            </div>
+          </div>
+          <div class="col-xs-6 col-sm-6 col-md-6">
+            <div class="form-group">
+              <label>
+              <span>Last Name</span>
+              <input type="text" name="lastname">
+              </label>
+            </div>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-xs-6 col-sm-6 col-md-6">
+            <div class="form-group">
+              <label>
+              <span>Email</span>
+              <input type="text" name="email">
+              </label>
+            </div>
+          </div>
+          <div class="col-xs-6 col-sm-6 col-md-6">
+            <div class="form-group">
+              <label>
+                <span>College</span>
+                <select name="dropdown">
+                  <option>Baruch College</option>
+                  <option>BMCC College</option>
+                  <option>City College</option>
+                  <option>Bronx Community College</option>
+                  <option>John Jay College</option>
+                  <option>Lehman College</option>
+                  
+                </select>
+              </label>
+            </div>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-xs-6 col-sm-6 col-md-6">
+            <div class="form-group">
+              <label>
+              <span>Username</span>
+              <input type="text" name="username">
+              </label>
+            </div>
+          </div>
+          <div class="col-xs-6 col-sm-6 col-md-6">
+            <div class="form-group">
+              <label>
+              <span>Password</span>
+              <input type="text" name="password">
+              </label>
+            </div>
+          </div>
+        </div>
+        <div class="clearfix">
+          <button type="submit" class="signupbtn">Sign Up</button>
+        </div>
+      </form>
+    </div>
+  </div>
+</div>
