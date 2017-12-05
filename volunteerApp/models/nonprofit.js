@@ -1,6 +1,8 @@
+// this is the nonprofit table
+const bcrypt = require('bcrypt-nodejs');
 module.exports = (sequelize, DataTypes) => {
-  const Post = sequelize.define('post', {
-    slug: {
+  const NonProfit = sequelize.define('NonProfit', {
+    name: { //nonprofit's name
       type: DataTypes.STRING,
       unique: 'compositeIndex',
       allowNull: false,
@@ -8,7 +10,7 @@ module.exports = (sequelize, DataTypes) => {
         notEmpty: true,
       },
     },
-    title: {
+    address: { //address of the nonprofit
       type: DataTypes.STRING,
       unique: 'compositeIndex',
       allowNull: false,
@@ -16,7 +18,7 @@ module.exports = (sequelize, DataTypes) => {
         notEmpty: true,
       },
     },
-    body: {
+    number: { //phone number
       type: DataTypes.STRING,
       allowNull: false,
       validate: {
@@ -25,9 +27,10 @@ module.exports = (sequelize, DataTypes) => {
     },
   });
 
-  Post.associate = (models) => {
-    models.Post.belongsTo(models.User);
+  NonProfit.associate = (models) => {
+    console.log(Object.keys(models))
+    models.NonProfit.hasMany(models.ServiceHour);
   }
 
-  return Post;
+  return NonProfit;
 };
