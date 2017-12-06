@@ -7,20 +7,20 @@
       {{#each error}}
       <div class="alert alert-danger">{{this}}</div>
       {{/each}}
-      <form name="login" action="/login" method="post" style="border:5px solid orange">
+      <form name="sign-up" action="/sign-up"  method="post" style="border:5px solid orange">
         <div class="row">
           <div class="col-xs-6 col-sm-6 col-md-6">
             <div class="form-group">
               <label>
               <span>First Name</span>
-              <input type="text" name="firstname"> </label>
+              <input type="text" name="firstname" required data-validation-required-message="Please enter your first name."> </label>
             </div>
           </div>
           <div class="col-xs-6 col-sm-6 col-md-6">
             <div class="form-group">
               <label>
               <span>Last Name</span>
-              <input type="text" name="lastname">
+              <input type="text" name="lastname" required data-validation-required-message="Please enter your last name. ">
               </label>
             </div>
           </div>
@@ -30,7 +30,7 @@
             <div class="form-group">
               <label>
               <span>Email</span>
-              <input type="text" name="email">
+              <input type="text" name="email" required data-validation-required-message="Please enter your email address.">
               </label>
             </div>
           </div>
@@ -64,7 +64,7 @@
             <div class="form-group">
               <label>
               <span>Password</span>
-              <input type="text" name="password">
+              <input type="text" name="password" required data-validation-required-message="Please enter your password.">>
               </label>
             </div>
           </div>

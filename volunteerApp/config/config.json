@@ -2,7 +2,7 @@
   "development": {
     "username": "postgres",
     "password": "ctp2017",
-    "database": "ctpblog_development",
+    "database": "volunteerProject",
     "host": "localhost",
     "dialect": "postgres"
   }
