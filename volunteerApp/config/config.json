@@ -2,7 +2,7 @@
   "development": {
     "username": "postgres",
     "password": "ctp2017",
-    "database": "volunteerProject",
+    "database": "volunteer",
     "host": "localhost",
     "dialect": "postgres"
   }

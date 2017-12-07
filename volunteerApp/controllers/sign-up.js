@@ -19,9 +19,9 @@ module.exports = {
       lastName: req.body.lastName,
       username: req.body.username,
       email: req.body.email,
-      college: req.body.college,
+     // college: req.body.college,
       password: req.body.password,
-    }).then((user) => {
+}).then((user) => {
       req.login(user, () =>
         res.redirect('/profile')
       );
