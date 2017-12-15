@@ -1,12 +1,12 @@
 {
-  "name": "ctp-blog",
+  "name": "volunteerApp",
   "version": "0.0.1",
-  "description": "A simple blog.",
+  "description": "CUNY Volunteers Project",
   "scripts": {
     "start": "nodemon -L app.js",
     "test": "mocha --recursive tests/"
   },
-  "author": "Donato & Edgardo",
+  "author": "Misha",
   "license": "ISC",
   "dependencies": {
     "bcrypt-nodejs": "0.0.3",
